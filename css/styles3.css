@@ -1,0 +1,216 @@
+body {
+  background-color: #f5f5dc; /* Beige claro */
+  color: #000000; /* Negro */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ebe7cf; /* Beige claro */
+  color: #b8860b; /* Dorado oscuro */
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Encabezado fijo */
+  top: 0; /* Fija el encabezado en la parte superior de la ventana */
+  width: 100%; /* Ajusta el ancho al 100% */
+  z-index: 1000; /* Asegura que el encabezado esté sobre otros elementos */
+}
+.logo {
+  margin-left: 20px; /* Agrega margen a la izquierda del logo */
+}
+
+nav {
+  margin-left: auto; /* Mueve la barra de navegación al extremo derecho */
+}
+
+.logo img {
+  width: 100px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 5px;
+  margin-right: 20px; /* Margen derecho agregado */
+}
+
+nav ul li a {
+  color: #b8860b; /* Dorado oscuro */
+  text-decoration: none;
+  padding: 10px; /* Aumentado el espacio entre los enlaces */
+  transition: color 0.3s ease; /* Agregar transición para un cambio suave de color */
+}
+nav ul li a:hover {
+  color: #7d5a15; /* Dorado más oscuro al pasar el mouse */
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #7d5a15; /* Dorado más oscuro */
+  transition: width 0.3s ease; /* Agregar transición para un cambio suave en el subrayado */
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Ajustar la anchura del subrayado al 100% cuando se pasa el mouse */
+}
+.section {
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cambia la opacidad como desees */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 20px;
+}
+
+.section h1 {
+  color: #b8860b; /* Dorado oscuro */
+  margin-bottom: 20px;
+  font-size: 2em; /* Tamaño de fuente más grande */
+}
+#inicio {
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Ajusta la altura de la sección al 100% del viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#servicios,
+#contacto {
+  background-color: #f5f5dc; /* Cambiar al mismo color de fondo */
+  color: #b8860b; /* Dorado oscuro */
+  padding: 50px 0; /* Ajusta el relleno según sea necesario */
+  border-bottom: 3px solid #b8860b; /* Agregar borde inferior */
+}
+/*#contacto {
+  background-color: #f5f5dc; /* Beige claro */
+/*color: #b8860b; /* Dorado oscuro */
+/*border-bottom: 3px solid #b8860b; /* Agregar borde inferior */
+/*padding: 50px 0; /* Ajusta el relleno según sea necesario */
+/*}*/
+
+.button {
+  background-color: #f5f5dc; /* Beige claro */
+  border: 1px solid #b8860b; /* Dorado oscuro */
+  color: #b8860b; /* Dorado oscuro */
+  /* Otros estilos... */
+}
+
+.divider {
+  border-top: 1px solid #b8860b; /* Dorado oscuro */
+  /* Otros estilos... */
+}
+
+footer {
+  background-color: #ebe7cf; /* Beige claro */
+  color: #b8860b;
+  /* Otros estilos... */
+}
+
+footer a {
+  color: #b8860b; /* Dorado oscuro */
+  /* Otros estilos... */
+}
+
+/* Estilos para pantallas grandes */
+.menu {
+  display: flex;
+}
+
+.menu-btn {
+  display: block; /* Ocultar el botón de menú en pantallas grandes */
+  margin-right: 20px; /* Agregar margen derecho al botón del menú */
+  color: #b8860b; /* Color dorado oscuro */
+}
+
+/* Media queries para dispositivos pequeños */
+@media only screen and (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: rgba(210, 180, 140, 0.9);
+    color: white; /* Color del texto blanco */
+    display: none; /* Ocultar el menú por defecto */
+    max-width: 300px; /* Ancho máximo del menú */
+    border-top-left-radius: 10px; /* Esquina superior izquierda redondeada */
+    border-bottom-left-radius: 10px; /* Esquina inferior izquierda redondeada */
+  }
+
+  .menu.active {
+    display: flex; /* Mostrar el menú cuando está activo */
+    flex-direction: column; /* Alinear elementos verticalmente */
+  }
+
+  .menu-btn {
+    display: block;
+    margin-right: 20px;
+    color: #b8860b; /* Cambia el color de las tres rayitas al dorado más oscuro */
+    border: 1px solid #b8860b; /* Borde dorado oscuro */
+    border-radius: 3px; /* Añadir bordes redondeados al botón */
+    transition: color 0.3s ease; /* Agregar transición para un cambio suave de color */
+    padding: 5px; /* Aumentar el espacio alrededor del botón */
+  }
+
+  .menu-btn:hover {
+    color: #5a3f0a; /* Cambia el color de las tres rayitas al dorado más oscuro al pasar el mouse */
+  }
+
+  .menu li {
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+  }
+
+  .menu li:last-child {
+    border-bottom: none;
+  }
+
+  .menu li a {
+    color: gold; /* Dorado */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+
+    transition: color 0.3s ease; /* Agregar transición para un cambio suave de color */
+  }
+
+  .menu li a:hover {
+    color: #ffd700; /* Cambia el color del texto al dorado más claro al pasar el mouse */
+  }
+}
+/* Media queries para dispositivos pequeños */
+@media only screen and (min-width: 769px) {
+  .menu-btn {
+    display: none; /* Ocultar el botón de menú en pantallas grandes */
+  }
+
+  .menu {
+    display: flex; /* Mostrar el menú por defecto en pantallas grandes */
+  }
+}
