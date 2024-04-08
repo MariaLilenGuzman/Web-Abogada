@@ -1,0 +1,462 @@
+body {
+  background-color: #dcd8c1; /* Beige claro */
+  color: #000000; /* Negro */
+  font-family: "Cormorant Infant", serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ebe7cf; /* Beige claro */
+  color: #b8860b; /* Dorado oscuro */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Encabezado fijo */
+  top: 0; /* Fija el encabezado en la parte superior de la ventana */
+  width: 100%; /* Ajusta el ancho al 100% */
+  height: 70px; /* Ajusta la altura del encabezado según sea necesario */
+  z-index: 1000; /* Asegura que el encabezado esté sobre otros elementos */
+}
+.logo {
+  margin-left: 20px; /* Agrega margen a la izquierda del logo */
+}
+.logo img {
+  width: 150px; /* Ajusta el ancho del logo */
+  height: auto; /* Esto mantiene la proporción del logo */
+}
+
+nav {
+  margin-left: auto; /* Mueve la barra de navegación al extremo derecho */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 5px;
+  margin-right: 20px; /* Margen derecho agregado */
+}
+
+nav ul li a {
+  color: #b8860b; /* Dorado oscuro */
+  font-size: 18px; /* Ajustar el tamaño de la fuente */
+  text-decoration: none;
+  padding: 10px; /* Aumentado el espacio entre los enlaces */
+  transition: color 0.3s ease; /* Agregar transición para un cambio suave de color */
+}
+nav ul li a:hover {
+  color: #7d5a15; /* Dorado más oscuro al pasar el mouse */
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #7d5a15; /* Dorado más oscuro */
+  transition: width 0.3s ease; /* Agregar transición para un cambio suave en el subrayado */
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Ajustar la anchura del subrayado al 100% cuando se pasa el mouse */
+}
+
+.section {
+  color: white;
+  text-align: center;
+  position: relative;
+  padding-top: 100px; /* Ajusta el espacio superior para que el título no quede cubierto por el encabezado */
+  scroll-margin-top: 70px; /* Ajusta la posición de desplazamiento para compensar la altura del encabezado */
+}
+
+.section h1 {
+  color: #b8860b; /* Dorado oscuro */
+  font-size: 48px; /* Tamaño de fuente */
+}
+.section p {
+  color: #595959;
+  margin-top: 60px; /* Ajusta la distancia con el borde superior */
+  text-align: justify; /* Justificar el texto */
+  line-height: 1.5; /* Puedes ajustar el valor según tus preferencias */
+  font-size: 25px; /* Tamaño de fuente */
+  font-family: "Cormorant Infant", serif !important;
+}
+/*tarjetas Áreas de Práctica de section servicio */
+
+.columnas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tarjeta {
+  position: relative;
+  border: 2px solid #ffd700; /* Borde dorado claro */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden;
+  margin-bottom: 20px;
+  flex: 0 0 calc(50% - 20px); /* Ancho de cada tarjeta al 50% del contenedor con un margen de 20px en dispositivos más pequeños */
+}
+
+.tarjeta::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url("../img/fondoTarjeta.jpg"); /* Ruta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.tarjeta h1,
+.tarjeta ul {
+  position: relative;
+  z-index: 1;
+  color: #595959;
+  padding: 20px;
+}
+
+.lista {
+  text-align: left;
+  font-size: 16px;
+}
+
+#conoceme,
+#servicios,
+#contacto {
+  background-color: #f5f5dc; /* Cambiar al mismo color de fondo */
+  color: #b8860b; /* Dorado oscuro */
+  padding: 50px 0; /* Ajusta el relleno según sea necesario */
+  border-bottom: 3px solid #b8860b; /* Agregar borde inferior */
+}
+footer {
+  background-color: #ebe7cf; /* Beige claro */
+  color: #b8860b;
+  /* Otros estilos... */
+}
+
+footer a {
+  color: #b8860b; /* Dorado oscuro */
+  /* Otros estilos... */
+}
+
+/* Media queries para dispositivos pequeños */
+@media only screen and (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas que 768px */
+  .logo img {
+    width: 100px; /* Ajusta el ancho del logo */
+    height: auto; /* Esto mantiene la proporción del logo */
+  }
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: rgba(210, 180, 140, 0.9);
+    color: white; /* Color del texto blanco */
+    display: none; /* Ocultar el menú por defecto */
+    max-width: 300px; /* Ancho máximo del menú */
+    border-top-left-radius: 10px; /* Esquina superior izquierda redondeada */
+    border-bottom-left-radius: 10px; /* Esquina inferior izquierda redondeada */
+  }
+
+  .menu.active {
+    display: flex; /* Mostrar el menú cuando está activo */
+    flex-direction: column; /* Alinear elementos verticalmente */
+  }
+
+  .menu-btn {
+    font-size: 30px; /* Tamaño de fuente más grande para las tres rayitas */
+    display: block;
+    margin-right: 20px;
+    color: #b8860b; /* Cambia el color de las tres rayitas al dorado más oscuro */
+    border: 1px solid #b8860b; /* Borde dorado oscuro */
+    border-radius: 3px; /* Añadir bordes redondeados al botón */
+    transition: color 0.3s ease; /* Agregar transición para un cambio suave de color */
+    padding: 5px; /* Aumentar el espacio alrededor del botón */
+  }
+
+  .menu-btn:hover {
+    color: #5a3f0a; /* Cambia el color de las tres rayitas al dorado más oscuro al pasar el mouse */
+  }
+
+  .menu li {
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+  }
+
+  .menu li:last-child {
+    border-bottom: none;
+  }
+
+  .menu li a {
+    color: gold; /* Dorado */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+
+    transition: color 0.3s ease; /* Agregar transición para un cambio suave de color */
+  }
+
+  .menu li a:hover {
+    color: #ffd700; /* Cambia el color del texto al dorado más claro al pasar el mouse */
+  }
+  /*INICIO*/
+  #inicio {
+    position: relative; /* Establecer la posición relativa en el contenedor */
+    background-size: cover; /* Cubrir todo el área disponible */
+    background-position: center; /* Centrar la imagen */
+    padding: 0; /* Eliminar el relleno para que la imagen ocupe todo el espacio */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column; /* Alinear los elementos verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+  }
+
+  .left-column {
+    width: 100%; /* Ajustar el ancho al 100% */
+  }
+
+  .left-column h1 {
+    position: absolute; /* Establecer la posición absoluta */
+    top: 70%; /* Colocar el título en la mitad superior */
+    left: 50%; /* Colocar el título en el centro */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Centrar el título vertical y horizontalmente */
+    z-index: 2; /* Asegurar que el título esté sobre la imagen */
+    color: #b8860b; /* Color dorado oscuro */
+    text-align: center; /* Alinear el texto al centro */
+    font-size: 24px; /* Tamaño de fuente */
+    padding: 20px; /* Añadir espacio interno */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    border: 2px solid #b8860b; /* Agregar borde con color dorado */
+    width: 90%; /* Ancho del título */
+    max-width: 400px; /* Ancho máximo del título */
+  }
+
+  /* Estilos para la columna derecha */
+
+  .image-container {
+    width: 100%; /* Ajustar el ancho al 100% */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que sobresalga */
+  }
+
+  .image-container img {
+    width: 100%; /* Ajustar el ancho al 100% */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Mostrar como bloque */
+  }
+  /*CONOCEME*/
+
+  .conoceme-right-column p {
+    margin: 30px; /* Ajusta el margen interior del párrafo */
+  }
+  /*SERVICIOS*/
+  .tarjeta {
+    flex: 0 0 calc(50% - 20px); /* Ancho de cada tarjeta al 50% del contenedor con un margen de 20px en dispositivos más pequeños */
+  }
+}
+
+/* Media queries para dispositivos pequeños MAS GRANDE QUE EL ANTERIOR como minimo la pantalla tien un ancho de 769px */
+@media only screen and (min-width: 769px) {
+  nav ul li a {
+    font-size: 25px;
+  }
+  .menu-btn {
+    display: none; /* Ocultar el botón de menú en pantallas grandes */
+  }
+
+  .menu {
+    display: flex; /* Mostrar el menú por defecto en pantallas grandes */
+  }
+  /*INICIO*/
+  #inicio {
+    position: relative; /* Establecer la posición relativa en el contenedor */
+    background-size: cover; /* Cubrir todo el área disponible */
+    background-position: center; /* Centrar la imagen */
+    padding: 0; /* Eliminar el relleno para que la imagen ocupe todo el espacio */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column; /* Alinear los elementos verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+  }
+
+  .left-column {
+    width: 100%; /* Ajustar el ancho al 100% */
+  }
+
+  .left-column h1 {
+    position: absolute; /* Establecer la posición absoluta */
+    top: 85%; /* Colocar el título en la mitad superior */
+    left: 50%; /* Colocar el título en el centro */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Centrar el título vertical y horizontalmente */
+    z-index: 2; /* Asegurar que el título esté sobre la imagen */
+    color: #b8860b; /* Color dorado oscuro */
+    text-align: center; /* Alinear el texto al centro */
+    font-size: 28px; /* Tamaño de fuente */
+    padding: 20px; /* Añadir espacio interno */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    border: 2px solid #b8860b; /* Agregar borde con color dorado */
+    width: 90%; /* Ancho del título */
+    max-width: 400px; /* Ancho máximo del título */
+  }
+  .right-column {
+    width: 95%; /* Ajustar el ancho al 50% del contenedor */
+    position: relative; /* Establecer la posición relativa */
+    z-index: 1; /* Asegurar que la imagen esté detrás del título */
+  }
+
+  .image-container {
+    width: 100%; /* Ajustar el ancho al 100% */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que sobresalga */
+    max-height: 100vh; /* Establecer una altura máxima  del alto de la ventana */
+  }
+
+  .image-container img {
+    width: 100%; /* Ajustar el ancho al 100% */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Mostrar como bloque */
+  }
+  /*CONOCEME*/
+  .conoceme-right-column p {
+    margin: 30px; /* Ajusta el margen interior del párrafo */
+  }
+  /*SERVICIOS*/
+  .columnas {
+    justify-content: space-around; /* Cambia a espacio alrededor de las tarjetas en pantallas más grandes */
+  }
+
+  .tarjeta {
+    flex: 0 0 calc(28% - 20px); /* Ancho de cada tarjeta al 33.33% del contenedor con un margen de 20px */
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* Agrega aquí los estilos específicos para pantallas muy grandes */
+
+  /*SECTION INICIO*/
+  #inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    flex-direction: row;
+  }
+  /* Estilos para la columna izquierda */
+  .left-column {
+    flex: 1; /* La columna izquierda ocupará el 50% del espacio disponible */
+    max-width: 30%; /* Establecer un ancho máximo */
+    position: relative;
+    /* Establece la posición relativa para que el h1 se pueda posicionar absolutamente dentro */
+  }
+
+  .left-column h1 {
+    position: absolute;
+    /* Establece la posición absoluta para que el título se pueda posicionar dentro de la columna */
+    top: 50%;
+    /* Coloca el título en el centro verticalmente */
+    left: 80%; /* Ajusta el título hacia la izquierda */
+    /* Coloca el título en el centro horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Centra el título absolutamente */
+    text-align: center;
+    /* Alinea el texto al centro */
+    color: #b8860b;
+    /* Color dorado oscuro */
+    font-size: 30px;
+    /* Tamaño de fuente */
+    padding: 20px;
+    /* Añade espacio interno */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo semitransparente */
+    border-radius: 10px;
+    /* Agrega bordes redondeados */
+    border: 2px solid #b8860b;
+    /* Agrega borde con color dorado */
+    width: 90%;
+    /* Ancho del título */
+    max-width: 400px;
+    /* Ancho máximo del título */
+  }
+
+  /* Estilos para la columna derecha */
+  .right-column {
+    max-width: 70%; /* Establecer un ancho máximo */
+    position: relative;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100%; /* Ajusta la altura al 100% de su contenedor */
+    overflow: hidden;
+    /* max-height: 100vh; /* Establecer una altura máxima del alto de la ventana */
+  }
+
+  .image-container img {
+    width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor */
+    height: 100%; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+    display: block;
+  }
+  /*SECTION CONOCEME*/
+
+  .conoceme-left-column {
+    flex: 1; /* La columna de la izquierda ocupa el 50% del espacio disponible */
+    padding-right: 10px; /* Espacio entre las columnas */
+    display: flex; /* Utilizar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-right: 10px; /* Distancia del borde derecho */
+    margin-left: 60px;
+  }
+  .conoceme-left-column .image-container img {
+    max-height: 800px; /* Establece la altura máxima de la imagen */
+  }
+  .conoceme-right-column {
+    flex: 1; /* Ambas columnas ocupan el mismo espacio */
+    padding-left: 10px; /* Espacio entre las columnas */
+    margin-right: 70px; /* Distancia del borde derecho */
+    margin-left: 10px; /* la distancia del borde izquierdo */
+  }
+
+  .conoceme-right-column p::first-letter {
+    /*primer letra de un párrafo sea más grande que el resto del texto*/
+    font-size: 1.5em; /* Tamaño de la primera letra */
+  }
+  /*SERVICIOS*/
+
+  .button {
+    background-color: #f5f5dc; /* Beige claro */
+    border: 1px solid #b8860b; /* Dorado oscuro */
+    color: #b8860b; /* Dorado oscuro */
+    /* Otros estilos... */
+  }
+
+  .divider {
+    border-top: 1px solid #b8860b; /* Dorado oscuro */
+    /* Otros estilos... */
+  }
+}
