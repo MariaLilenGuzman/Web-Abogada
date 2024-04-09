@@ -1,3 +1,11 @@
+font-face {
+  font-family: "Lexend";
+  src: url("../fonts/Lexend-Regular.ttf") format("truetype");
+  /* Ajusta la ruta según la ubicación real de tus archivos de fuente */
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: #dcd8c1; /* Beige claro */
   color: #000000; /* Negro */
@@ -74,7 +82,11 @@ nav ul li a:hover::after {
   padding-top: 100px; /* Ajusta el espacio superior para que el título no quede cubierto por el encabezado */
   scroll-margin-top: 70px; /* Ajusta la posición de desplazamiento para compensar la altura del encabezado */
 }
-
+.left-column p {
+  color: #b8860b; /* Dorado oscuro */
+  font-family: "Lexend", sans-serif;
+  font-size: 48px; /* Tamaño de fuente */
+}
 .section h1 {
   color: #b8860b; /* Dorado oscuro */
   font-size: 48px; /* Tamaño de fuente */
@@ -84,8 +96,8 @@ nav ul li a:hover::after {
   margin-top: 60px; /* Ajusta la distancia con el borde superior */
   text-align: justify; /* Justificar el texto */
   line-height: 1.5; /* Puedes ajustar el valor según tus preferencias */
-  font-size: 25px; /* Tamaño de fuente */
-  font-family: "Cormorant Infant", serif !important;
+  font-size: 20px; /* Tamaño de fuente */
+  font-family: "Lexend", sans-serif !important;
 }
 /*tarjetas Áreas de Práctica de section servicio */
 
@@ -229,7 +241,7 @@ footer a {
     width: 100%; /* Ajustar el ancho al 100% */
   }
 
-  .left-column h1 {
+  .left-column p {
     position: absolute; /* Establecer la posición absoluta */
     top: 70%; /* Colocar el título en la mitad superior */
     left: 50%; /* Colocar el título en el centro */
@@ -303,7 +315,7 @@ footer a {
     width: 100%; /* Ajustar el ancho al 100% */
   }
 
-  .left-column h1 {
+  .left-column p {
     position: absolute; /* Establecer la posición absoluta */
     top: 85%; /* Colocar el título en la mitad superior */
     left: 50%; /* Colocar el título en el centro */
@@ -373,7 +385,7 @@ footer a {
     /* Establece la posición relativa para que el h1 se pueda posicionar absolutamente dentro */
   }
 
-  .left-column h1 {
+  .left-column p {
     position: absolute;
     /* Establece la posición absoluta para que el título se pueda posicionar dentro de la columna */
     top: 50%;
