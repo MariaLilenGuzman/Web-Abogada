@@ -99,6 +99,9 @@ nav ul li a:hover::after {
   font-size: 20px; /* Tamaño de fuente */
   font-family: "Lexend", sans-serif !important;
 }
+/*CONOCEME*/
+
+/*SERVICIOS*/
 /*tarjetas Áreas de Práctica de section servicio */
 
 .columnas {
@@ -434,7 +437,11 @@ footer a {
     display: block;
   }
   /*SECTION CONOCEME*/
-
+  .conoceme-container {
+    display: flex;
+    /*flex-direction: column; /* Alinear los elementos verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+  }
   .conoceme-left-column {
     flex: 1; /* La columna de la izquierda ocupa el 50% del espacio disponible */
     padding-right: 10px; /* Espacio entre las columnas */
@@ -452,6 +459,14 @@ footer a {
     padding-left: 10px; /* Espacio entre las columnas */
     margin-right: 70px; /* Distancia del borde derecho */
     margin-left: 10px; /* la distancia del borde izquierdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos al inicio de la columna */
+    align-items: flex-start; /* Alinea los elementos al inicio de la columna */
+  }
+  .conoceme-right-column p {
+    margin: 0 30px 30px; /* Modifica el margen superior para ajustar la posición vertical del párrafo */
+    align-self: flex-start; /* Ajusta la alineación vertical del párrafo al inicio de la columna */
   }
 
   .conoceme-right-column p::first-letter {
