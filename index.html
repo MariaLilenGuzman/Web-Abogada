@@ -181,6 +181,13 @@
         menu.classList.toggle("active"); // Agregar o eliminar la clase 'active' en el menú
         menuBtn.classList.toggle("active"); // Agregar o eliminar la clase 'active' en el botón de menú
       });
+      // Nuevo código para ocultar el menú cuando se selecciona una opción
+      document.querySelectorAll(".menu li a").forEach((item) => {
+        item.addEventListener("click", () => {
+          menu.classList.remove("active"); // Oculta el menú
+          menuBtn.classList.remove("active"); // Muestra el botón del menú
+        });
+      });
     </script>
   </body>
   <footer>
