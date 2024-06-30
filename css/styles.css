@@ -24,11 +24,12 @@ header {
   position: fixed; /* Encabezado fijo */
   top: 0; /* Fija el encabezado en la parte superior de la ventana */
   width: 100%; /* Ajusta el ancho al 100% */
-  height: 70px; /* Ajusta la altura del encabezado según sea necesario */
+  height: 79px; /* Ajusta la altura del encabezado según sea necesario */
   z-index: 1000; /* Asegura que el encabezado esté sobre otros elementos */
 }
 .logo {
   margin-left: 20px; /* Agrega margen a la izquierda del logo */
+  margin-top: 10px;
 }
 .logo img {
   width: 150px; /* Ajusta el ancho del logo */
@@ -104,100 +105,81 @@ nav ul li a:hover::after {
 /*SERVICIOS*/
 /*tarjetas Áreas de Práctica de section servicio */
 
-.columnas {
+.grid-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las tarjetas */
 }
 
-.tarjeta {
+.card1 {
+  text-align: center;
+  padding: 2rem 4rem 2rem 1rem;
+  background-color: #b8860b; /* Cambio de color de fondo a dorado */
   position: relative;
-  border: 3px solid #b8860b; /* Borde dorado claro */
+  border: 5px solid #ebe7cf; /* Borde color crema */
   border-radius: 10px; /* Bordes redondeados */
-  overflow: hidden;
-  margin-bottom: 20px;
-  flex: 0 0 calc(50% - 20px); /* Ancho de cada tarjeta al 50% del contenedor con un margen de 20px en dispositivos más pequeños */
-
-  background-color: #ebe7cf;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 40px;
 }
 
-.tarjeta-civil::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: url("../img/civil2.jpg"); /* Ruta de la imagen de fondo */
-  background-size: cover;
-  background-position: center;
-}
-.tarjeta-familia::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: url("../img/familia4.jpg"); /* Ruta de la imagen de fondo */
-  background-size: cover;
-  background-position: center;
-}
-.tarjeta-previsional::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: url("../img/previ4.jpg"); /* Ruta de la imagen de fondo */
-  background-size: cover;
-  background-position: center;
-}
-.tarjeta-laboral::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: url("../img/laboral.jpg"); /* Ruta de la imagen de fondo */
-  background-size: cover;
-  background-position: center;
-}
-.tarjeta-penal::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-image: url("../img/penal3.jpg"); /* Ruta de la imagen de fondo */
-  background-size: cover;
-  background-position: center;
-}
-.tarjeta h1,
-.tarjeta ul {
-  position: relative;
-  z-index: 1;
-  /*color: #595959;*/
-  padding: 20px;
-}
-.tarjeta h1 {
-  color: #dcd8c1;
-}
-.tarjeta ul {
-  color: #595959;
+.card1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.lista {
-  text-align: left;
-  font-size: 16px;
+.card1:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: skyblue;
+  top: 0;
+  right: 0;
+  border-bottom: 20px solid #b8860b; /* darken(goldenrod, 5%) */
+  border-left: 20px solid #b8860b; /* darken(goldenrod, 5%) */
+  border-right: 20px solid #f5f5dc;
+  border-top: 20px solid #f5f5dc;
+  position: absolute;
+  filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.5));
+}
+
+.card1:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 20px solid #b8860b; /* darken(goldenrod, 5%) */
+  border-right: 20px solid #b8860b; /* darken(goldenrod, 5%) */
+  border-left: 20px solid #f5f5dc;
+  border-bottom: 20px solid #f5f5dc;
+  bottom: -1px; /* Ajusta la posición del doblez */
+  left: 0;
+  position: absolute;
+  filter: drop-shadow(7px -7px 5px rgba(0, 0, 0, 0.5));
+}
+
+.card1 h2 {
+  color: #f5f5dc; /* Color de texto crema */
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.card1 p {
+  color: #f5f5dc; /* Color de texto crema */
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.card1 li {
+  font-size: 1.2rem;
+  color: #f5f5dc; /* Color de texto crema */
+  text-align: justify; /* Justificar el texto */
+  margin-bottom: 0.5rem; /* Espacio entre elementos de la lista */
 }
 
 #inicio {
@@ -339,7 +321,7 @@ footer a {
     margin: 30px; /* Ajusta el margen interior del párrafo */
   }
   /*SERVICIOS*/
-  .tarjeta {
+  .card1 {
     flex: 0 0 calc(50% - 20px); /* Ancho de cada tarjeta al 50% del contenedor con un margen de 20px en dispositivos más pequeños */
   }
 }
@@ -416,12 +398,12 @@ footer a {
     margin: 30px; /* Ajusta el margen interior del párrafo */
   }
   /*SERVICIOS*/
-  .columnas {
+  .grid-container {
     justify-content: space-around; /* Cambia a espacio alrededor de las tarjetas en pantallas más grandes */
   }
 
-  .tarjeta {
-    flex: 0 0 calc(28% - 20px); /* Ancho de cada tarjeta al 33.33% del contenedor con un margen de 20px */
+  .card1 {
+    flex: 0 0 calc(28% - 20px); /* Ancho de cada tarjeta al 28% del contenedor con un margen de 20px */
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -484,7 +466,6 @@ footer a {
     width: 100%;
     height: 100%; /* Ajusta la altura al 100% de su contenedor */
     overflow: hidden;
-    /* max-height: 100vh; /* Establecer una altura máxima del alto de la ventana */
   }
 
   .image-container img {
@@ -496,7 +477,6 @@ footer a {
   /*SECTION CONOCEME*/
   .conoceme-container {
     display: flex;
-    /*flex-direction: column; /* Alinear los elementos verticalmente */
     justify-content: center; /* Centrar verticalmente */
   }
   .conoceme-left-column {
@@ -509,12 +489,9 @@ footer a {
     margin-left: 60px;
   }
   .conoceme-left-column .conoceme-image-container img {
-    /*max-height: 800px; /* Establece la altura máxima de la imagen */
     width: 65%;
   }
-  /*.conoceme-image-container {
-    width: 60%;
-  }*/
+
   .conoceme-right-column {
     flex: 1; /* Ambas columnas ocupan el mismo espacio */
     padding-left: 10px; /* Espacio entre las columnas */
@@ -535,7 +512,8 @@ footer a {
     font-size: 1.5em; /* Tamaño de la primera letra */
   }
   /*SERVICIOS*/
-
+  .card1 {
+  }
   .button {
     background-color: #f5f5dc; /* Beige claro */
     border: 1px solid #b8860b; /* Dorado oscuro */
@@ -545,6 +523,5 @@ footer a {
 
   .divider {
     border-top: 1px solid #b8860b; /* Dorado oscuro */
-    /* Otros estilos... */
   }
 }
