@@ -226,15 +226,40 @@ nav ul li a:hover::after {
   padding: 50px 0; /* Ajusta el relleno según sea necesario */
   border-bottom: 3px solid #b8860b; /* Agregar borde inferior */
 }
+/* FOOTER */
+
 footer {
   background-color: #ebe7cf; /* Beige claro */
   color: #b8860b;
-  /* Otros estilos... */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100px; /* Ajusta según tu diseño */
 }
 
-footer a {
-  color: #b8860b; /* Dorado oscuro */
-  /* Otros estilos... */
+.footer-container {
+  padding-left: 30%;
+  padding-right: 30%;
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente */
+  margin: 0 auto;
+}
+
+/* Estilo para la sección "Creado por:" */
+.footer-creado {
+  margin-right: 20px; /* Espacio entre el texto y el logo */
+}
+
+.footer-creado p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Estilo para la sección del logo */
+.footer-logo img {
+  display: block; /* Quita espacios por defecto alrededor de la imagen */
+  height: auto; /* Ajusta el tamaño según el contenido */
+  width: 170px;
 }
 
 /* Media queries para dispositivos pequeños */
@@ -387,6 +412,16 @@ footer a {
     word-wrap: break-word; /* Permite que las palabras largas se rompan y se ajusten al ancho del contenedor */
     white-space: normal; /* Permite que el texto se envuelva en múltiples líneas */
   }
+  /*FOOTER*/
+  footer {
+    flex-direction: column; /* Cambia a orientación vertical */
+    height: auto; /* Ajusta la altura según el contenido */
+  }
+
+  .footer-creado {
+    margin-bottom: 10px; /* Espacio debajo de "Creado por:" */
+    margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+  }
 }
 
 /* Media queries para dispositivos pequeños MAS GRANDE QUE EL ANTERIOR como minimo la pantalla tien un ancho de 769px */
@@ -479,6 +514,10 @@ footer a {
   }
   .contacto-right-column {
     margin: 30px;
+  }
+  /*FOOTER*/
+  footer {
+    height: 140px; /* Ajusta la altura según el diseño */
   }
 }
 @media only screen and (min-width: 1024px) {
