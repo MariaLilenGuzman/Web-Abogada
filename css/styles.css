@@ -1,7 +1,7 @@
 font-face {
   font-family: "Lexend";
   src: url("../fonts/Lexend-Regular.ttf") format("truetype");
-  /* Ajusta la ruta según la ubicación real de tus archivos de fuente */
+  /* la ruta de la ubicación de  archivos de fuente */
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,22 @@ header {
   width: 100%; /* Ajusta el ancho al 100% */
   height: 79px; /* Ajusta la altura del encabezado según sea necesario */
   z-index: 1000; /* Asegura que el encabezado esté sobre otros elementos */
+}
+.btn-wsp {
+  position: fixed;
+  bottom: 20px; /* Ajusta este valor según la separación que quieras desde el borde inferior */
+  right: 20px; /* Ajusta este valor según la separación que quieras desde el borde izquierdo */
+  z-index: 1060;
+  width: 50px; /* Ajusta el ancho del ícono */
+  height: 50px; /* Ajusta la altura del ícono */
+  display: flex; /* Centra el contenido dentro del contenedor */
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.btn-wsp img {
+  width: 100%; /* Ajusta el tamaño de la imagen para que ocupe todo el contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 .logo {
   margin-left: 20px; /* Agrega margen a la izquierda del logo */
@@ -101,7 +117,20 @@ nav ul li a:hover::after {
   font-family: "Lexend", sans-serif !important;
 }
 /*CONOCEME*/
+.conoceme-image-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Esto asegurará que la imagen se recorte si es necesario */
+}
 
+.conoceme-image-container img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Asegura que la imagen no sea más grande que su contenedor */
+}
 /*SERVICIOS*/
 /*tarjetas Áreas de Práctica de section servicio */
 
@@ -178,7 +207,7 @@ nav ul li a:hover::after {
 .card1 li {
   font-size: 1.2rem;
   color: #f5f5dc; /* Color de texto crema */
-  text-align: justify; /* Justificar el texto */
+  text-align: left; /* Justificar el texto */
   margin-bottom: 0.5rem; /* Espacio entre elementos de la lista */
 }
 
@@ -264,6 +293,17 @@ footer a {
   .menu li a:hover {
     color: #ffd700; /* Cambia el color del texto al dorado más claro al pasar el mouse */
   }
+
+  .btn-wsp {
+    width: 55px;
+    height: 55px;
+  }
+
+  .btn-wsp {
+    width: 40px; /* Ajusta el tamaño del ícono en pantallas más pequeñas */
+    height: 40px;
+  }
+
   /*INICIO*/
   #inicio {
     position: relative; /* Establecer la posición relativa en el contenedor */
@@ -316,7 +356,10 @@ footer a {
     display: block; /* Mostrar como bloque */
   }
   /*CONOCEME*/
-
+  .conoceme-image-container img {
+    width: 85%;
+    height: auto;
+  }
   .conoceme-right-column p {
     margin: 30px; /* Ajusta el margen interior del párrafo */
   }
@@ -381,7 +424,7 @@ footer a {
     position: relative; /* Establecer la posición relativa */
     z-index: 1; /* Asegurar que la imagen esté detrás del título */
   }
-
+  /*imagen de inicio*/
   .image-container {
     width: 100%; /* Ajustar el ancho al 100% */
     overflow: hidden; /* Ocultar cualquier parte de la imagen que sobresalga */
@@ -394,6 +437,7 @@ footer a {
     display: block; /* Mostrar como bloque */
   }
   /*CONOCEME*/
+  /*imgen de conoceme*/
   .conoceme-right-column p {
     margin: 30px; /* Ajusta el margen interior del párrafo */
   }
@@ -407,8 +451,12 @@ footer a {
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* Agrega aquí los estilos específicos para pantallas muy grandes */
+  /* estilos específicos para pantallas muy grandes */
 
+  .btn-wsp {
+    width: 60px; /* Ajusta el tamaño del ícono en pantallas más grandes */
+    height: 60px;
+  }
   /*SECTION INICIO*/
   #inicio {
     display: flex;
