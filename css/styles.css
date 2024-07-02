@@ -210,7 +210,11 @@ nav ul li a:hover::after {
   text-align: left; /* Justificar el texto */
   margin-bottom: 0.5rem; /* Espacio entre elementos de la lista */
 }
+/*CONTACTO*/
 
+.contacto-right-column p {
+  text-align: left;
+}
 #inicio {
   border-bottom: 3px solid #b8860b; /* Agregar borde inferior */
 }
@@ -367,6 +371,22 @@ footer a {
   .card1 {
     flex: 0 0 calc(50% - 20px); /* Ancho de cada tarjeta al 50% del contenedor con un margen de 20px en dispositivos más pequeños */
   }
+
+  /*CONTACTO*/
+  .contacto-left-column h2 {
+    text-align: left;
+    margin: 30px;
+  }
+  .contacto-left-column p {
+    margin: 30px;
+  }
+  .contacto-right-column {
+    margin: 30px;
+  }
+  .contacto-right-column a {
+    word-wrap: break-word; /* Permite que las palabras largas se rompan y se ajusten al ancho del contenedor */
+    white-space: normal; /* Permite que el texto se envuelva en múltiples líneas */
+  }
 }
 
 /* Media queries para dispositivos pequeños MAS GRANDE QUE EL ANTERIOR como minimo la pantalla tien un ancho de 769px */
@@ -420,7 +440,7 @@ footer a {
     max-width: 400px; /* Ancho máximo del título */
   }
   .right-column {
-    width: 95%; /* Ajustar el ancho al 50% del contenedor */
+    width: 95%; /* Ajustar el ancho al 95% del contenedor */
     position: relative; /* Establecer la posición relativa */
     z-index: 1; /* Asegurar que la imagen esté detrás del título */
   }
@@ -448,6 +468,17 @@ footer a {
 
   .card1 {
     flex: 0 0 calc(28% - 20px); /* Ancho de cada tarjeta al 28% del contenedor con un margen de 20px */
+  }
+  /*CONTACTO*/
+  .contacto-left-column h2 {
+    text-align: left;
+    margin: 30px;
+  }
+  .contacto-left-column p {
+    margin: 30px;
+  }
+  .contacto-right-column {
+    margin: 30px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -560,7 +591,29 @@ footer a {
     font-size: 1.5em; /* Tamaño de la primera letra */
   }
   /*SERVICIOS*/
-  .card1 {
+
+  /*CONTACTO*/
+  .contacto-container {
+    display: flex;
+  }
+  .contacto-left-column {
+    padding-right: 70px; /* Espacio entre las columnas */
+    width: 35%;
+  }
+  .contacto-left-column h2 {
+    text-align: left;
+    margin: 30px;
+  }
+  .contacto-left-column p {
+    margin: 30px;
+  }
+  .contacto-right-column {
+    width: 65%;
+    margin: 30px;
+    /*padding-left: 50px; /* Espacio entre las columnas */
+  }
+  .contacto-right-column p {
+    margin-left: 70px;
   }
   .button {
     background-color: #f5f5dc; /* Beige claro */
