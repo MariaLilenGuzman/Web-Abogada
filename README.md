@@ -69,4 +69,4 @@ Abre el archivo `index.html` en tu navegador para ver la web estática.
 
 
 ## Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
