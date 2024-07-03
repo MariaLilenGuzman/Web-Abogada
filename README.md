@@ -40,3 +40,11 @@ Aquí se pueden ver las capturas de pantalla del sitio web en una resolución m�
 
 ![Captura de pantalla 7](screenshots/screenshots7.png)
 
+## Características
+- Diseño responsivo.
+- Uso de HTML5 y CSS3.
+- Información detallada sobre los servicios legales ofrecidos.
+- Sección de contacto.
+- Botón flotante de WhatsApp: Un botón fijo en la parte inferior izquierda de la pantalla que permite a los usuarios enviar mensajes directamente a través de WhatsApp.
+- Enlaces directos a las redes sociales y correo electrónico de la profesional.
+-  Al hacer clic sobre el número de teléfono desde un celular, se puede llamar directamente.
