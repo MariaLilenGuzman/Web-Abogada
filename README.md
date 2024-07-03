@@ -46,7 +46,7 @@ Aquí se pueden ver las capturas de pantalla del sitio web en una resolución m�
 ## Instalación
 1. Clona el repositorio:
     ```bash
-    git clone https://github.com/usuario/repositorio.git
+    git clone https://github.com/MariaLilenGuzman/estudioJuridico.git
     ```
 2. Navega al directorio del proyecto:
     ```bash
