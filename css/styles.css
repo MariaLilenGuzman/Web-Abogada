@@ -12,6 +12,7 @@ body {
   font-family: "Cormorant Infant", serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Evita el scroll horizontal */
 }
 
 header {
@@ -238,8 +239,8 @@ footer {
 }
 
 .footer-container {
-  padding-left: 30%;
-  padding-right: 30%;
+  /*padding-left: 30%;
+  padding-right: 30%;*/
   display: flex;
   align-items: center; /* Alinea los elementos verticalmente */
   margin: 0 auto;
@@ -259,7 +260,7 @@ footer {
 .footer-logo img {
   display: block; /* Quita espacios por defecto alrededor de la imagen */
   height: auto; /* Ajusta el tamaño según el contenido */
-  width: 170px;
+  max-width: 170px;
 }
 
 /* Media queries para dispositivos pequeños */
