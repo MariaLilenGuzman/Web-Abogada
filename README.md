@@ -1,5 +1,5 @@
 # Estudio Juridico
-Este repositorio contiene el código fuente de la página web de un abogado, donde se encuentran disponibles sus datos de contacto y los servicios legales que ofrece.
+Este proyecto consiste en una web estática para una abogada, desarrollada con HTML y CSS. La web proporciona información profesional y detalla los servicios legales ofrecidos. Está alojada en GitHub Pages para facilitar su acceso y visualización. Puedes visitarla en: Cyntia Guzmán Abogada.
 ## Índice
 1. [Descripción](#descripción)
 2. [Instalación](#instalación)
