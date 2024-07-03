@@ -16,5 +16,6 @@ Esta web estática está diseñada para una abogada, con el objetivo de proporci
 </div>
 
 ## Capturas de pantalla
+![Captura de pantalla 1](screeshots/screenshots1.png)
 
 
