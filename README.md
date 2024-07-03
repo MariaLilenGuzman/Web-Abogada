@@ -17,11 +17,12 @@ Esta web estática está diseñada para una abogada, con el objetivo de proporci
 
 ## Capturas de pantalla
 <div style="text-align: justify;">
-A continuación, se presentan las capturas de pantalla de la web en dos tamaños de pantalla diferentes: 1024px y 768px. Estas imágenes ilustran cómo se ve el sitio en distintos dispositivos y resoluciones, lo que permite evaluar la adaptabilidad y la experiencia de usuario en diferentes entornos.
+A continuación, se presentan las capturas de pantalla de la web en dos tamaños de pantalla diferentes: 1024px y un máximo de 768px. Estas imágenes ilustran cómo se ve el sitio en distintos dispositivos y resoluciones, lo que permite evaluar la adaptabilidad y la experiencia de usuario en diferentes entornos.
 </div>
 
 ### Pantalla de 1024px
 Estas capturas muestran el diseño y la funcionalidad del sitio web en una pantalla con una resolución de 1024px, ideal para dispositivos como laptops y algunos monitores de escritorio.
+
 ![Captura de pantalla 1](screenshots/screenshots1.png)
 
 ![Captura de pantalla 2](screenshots/screenshots2.png)
@@ -29,3 +30,13 @@ Estas capturas muestran el diseño y la funcionalidad del sitio web en una panta
 ![Captura de pantalla 3](screenshots/screenshots3.png)
 
 ![Captura de pantalla 4](screenshots/screenshots4.png)
+
+### Pantalla de max-width: 768px
+Aquí se pueden ver las capturas de pantalla del sitio web en una resolución máxima de 768px, comúnmente utilizada en tablets y dispositivos móviles.
+
+![Captura de pantalla 5](screenshots/screenshots5.png)
+
+![Captura de pantalla 6](screenshots/screenshots6.png)
+
+![Captura de pantalla 7](screenshots/screenshots7.png)
+
