@@ -11,6 +11,10 @@ Este proyecto consiste en una web estática desarrollada con HTML y CSS. La web 
 7. [Licencia](#licencia)
 
 ## Descripción:
-Esta web estática está diseñada para una abogada, con el objetivo de proporcionar una plataforma profesional donde los clientes potenciales puedan conocer más sobre su experiencia y servicios. La web incluye secciones detalladas sobre su biografía, áreas de especialización y una forma de contacto. Su diseño responsivo garantiza una buena visualización en dispositivos móviles y de escritorio.
+<div style="text-align: justify;">
+Esta web estática está diseñada para una abogada, con el objetivo de proporcionar una plataforma profesional donde los clientes potenciales puedan conocer más sobre su experiencia y servicios. La web incluye secciones detalladas sobre su biografía, áreas de especialización, una forma de contacto y un botón flotante de WhatsApp para facilitar la comunicación inmediata. Su diseño responsivo garantiza una buena visualización en dispositivos móviles y de escritorio. En la sección de contacto, hay accesos a las redes sociales de la profesional y, si se accede desde un celular, al hacer clic sobre su número de teléfono, se puede llamar directamente sin necesidad de agendar el número.
+</div>
 
 ## Capturas de pantalla
+
+
